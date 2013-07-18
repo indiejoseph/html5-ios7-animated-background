@@ -1,0 +1,40 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>IOS 7 Animated Background</title>
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta names="apple-mobile-web-app-status-bar-style" content="black"/>
+    
+    <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="animatedBackgroundApp">
+    <!-- Add your site or application content here -->
+    <div class="container" ng-view=""></div>
+    <div id="debug"></div>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+    <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

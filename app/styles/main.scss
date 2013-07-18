@@ -1,0 +1,115 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "foundation/foundation-global"; // *always required
+// @import "foundation/components/global"; // *always required
+// @import "foundation/components/grid";
+// @import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+// @import "foundation/components/type";
+// @import "foundation/components/buttons";
+// @import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+// @import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+// @import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+@mixin at2x($image) {
+	@media  (min--moz-device-pixel-ratio: 1.3),
+			(-o-min-device-pixel-ratio: 2.6/2),
+			(-webkit-min-device-pixel-ratio: 1.3),
+			(min-device-pixel-ratio: 1.3),
+			(min-resolution: 1.3dppx) {
+		/* on retina, use image that's scaled by 2 */
+		background-image: url($image);
+	}
+}
+
+html, body {
+  height: 100%;
+}
+
+body {}
+
+.container {
+	width: 320px;
+	margin: 0 auto;
+	height: 568px;
+	position: relative;
+}
+
+#mobile {
+	background: url('../images/bg.png') 50% 50% repeat scroll;
+	background-size: 464px 609px;
+	height: 100%;
+	@include at2x('../images/bg@2x.png');
+}
+
+#icons {
+	background: url('../images/icons.png') 0 0 no-repeat scroll;
+	background-size: 320px 433px;
+	width: 320px;
+	height: 433px;
+	position: absolute;
+	left: 0;
+	top: 22px;
+	@include at2x('../images/icons@2x.png');
+}
+
+#status {
+	background: url('../images/status_bar.png') 0 0 no-repeat scroll;
+	background-size: 320px 22px;
+	width: 320px;
+	height: 22px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	@include at2x('../images/status_bar@2x.png');
+}
+
+#dock {
+	background: url('../images/dock.png') 0 0 no-repeat scroll;
+	background-size: 320px 113px;
+	width: 320px;
+	height: 113px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	@include at2x('../images/dock@2x.png');
+}
