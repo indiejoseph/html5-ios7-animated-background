@@ -18,7 +18,7 @@ angular.module('animatedBackgroundApp', [])
 			accelerationX = event.accelerationIncludingGravity.x  
 			accelerationY = event.accelerationIncludingGravity.y 
 			bgX = (50 - accelerationX).toFixed 3
-			bgY = ((50 - accelerationY).toFixed 3) * 4
+			bgY = ((0 - accelerationY).toFixed 3) * 4
 			mobile = document.getElementById 'mobile'
 			mobile.style.backgroundPositionX = "#{bgX}%"
 			mobile.style.backgroundPositionY = "#{bgY}%"
